@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "packageManager": "pnpm@8.7.0",
+  "scripts": {
+    "build": "node build.mjs",
+    "link": "node link.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "npx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.41.0",
+    "@blackwhite88/gamecreatorlib": "^0.990.622",
+    "@gamecreator/gamecreatorlib": "^0.990.62",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2"
+  }
+}
