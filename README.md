@@ -5,7 +5,6 @@ GameCreator功能开发起手模板
 ## 开始
 
 ```npm
-npm install
 npm install pnpm -g
 pnpm install
 ```
