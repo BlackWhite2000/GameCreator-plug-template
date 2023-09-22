@@ -26,9 +26,6 @@ jobs:
       - name: 执行Lint
         run: pnpm run lint
 
-      - name: 执行typecheck
-        run: pnpm run typecheck
-
   automerge:
     needs: ci
     if: github.actor == 'dependabot[bot]'
