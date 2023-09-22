@@ -8,12 +8,6 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^0.43.1
     version: 0.43.1(eslint@8.49.0)(typescript@5.2.2)
-  '@blackwhite88/gamecreatorlib':
-    specifier: ^0.990.622
-    version: 0.990.622
-  '@gamecreator/gamecreatorlib':
-    specifier: ^0.990.62
-    version: registry.npmmirror.com/@gamecreator/gamecreatorlib@0.990.62
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
@@ -150,10 +144,6 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: true
-
-  /@blackwhite88/gamecreatorlib@0.990.622:
-    resolution: {integrity: sha512-xd1pRZxv9aNf6qh6Sn4scvxiEQKBepwB6W0KfNVn/wY3rkmp7cf9AcdFwnJuY2ieHtie9LOfq0S69JKFD86i7A==}
     dev: true
 
   /@es-joy/jsdoccomment@0.40.1:
@@ -2020,10 +2010,4 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: true
-
-  registry.npmmirror.com/@gamecreator/gamecreatorlib@0.990.62:
-    resolution: {integrity: sha512-0fv552H84fqAXNGevpayew0QV8zBDKi4ninT06vVb/BT2P7R2FjKu26srUcQ2RfNTRsy/Ck3X8oS3q4ZjW1PtA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@gamecreator/gamecreatorlib/-/gamecreatorlib-0.990.62.tgz}
-    name: '@gamecreator/gamecreatorlib'
-    version: 0.990.62
     dev: true

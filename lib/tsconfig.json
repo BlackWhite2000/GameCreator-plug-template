@@ -5,19 +5,20 @@
       "DOM",
       "ES2015"
     ],
-    "rootDir": "./src",
+    "rootDir": "./tmp",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
+    "declarationDir": "./dist",
     "forceConsistentCasingInFileNames": true,
-    "strict": true
+    "strict": false
   },
   "skipLibCheck": true,
   "files": [
-    "lib/index.d.ts"
+    "type/api.d.ts"
   ],
   "include": [
-    "src/**/*.ts"
+    "tmp/**/*.ts"
   ],
   "exclude": [
     "node_modules"

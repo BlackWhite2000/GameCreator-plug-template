@@ -2,16 +2,23 @@
   "private": true,
   "packageManager": "pnpm@8.7.0",
   "scripts": {
-    "build": "node build.mjs",
-    "build:w": "node build.mjs -w",
-    "link": "node link.mjs",
+    "init": "pnpm run init:delete && pnpm run build:lib && pnpm run build && pnpm run link && node script/hello.mjs && pnpm run build:w",
+    "build:w": "node script/build_ts.mjs -w",
+    "build:update": "pnpm run build:public && pnpm run build:ts",
+    "build": "node script/build_ts.mjs",
+    "build:public": "node script/delete_nottype.mjs -dist/public && node public/config.mjs && node script/copy_dist.mjs -public",
+    "build:ts": "node script/delete_nottype.mjs -dist/public && tsc -p ./build/tsconfig.json && node script/copy_dist.mjs -build",
+    "build:lib": "pnpm run lib:gc && pnpm run lib:game && pnpm run lib:index",
+    "link": "node script/link_ts.mjs",
+    "lib:gc": "node script/copy_lib.mjs -GameCreatorLib -/dist/gc && node script/build_lib.mjs -/dist/gc -/type/api.d.ts && node script/delete_nottype.mjs -lib/dist/gc",
+    "lib:game": "node script/copy_lib.mjs -Game -/tmp/game && tsc -p ./lib/tsconfig.json && node script/build_lib.mjs -/dist/game -/type/game.d.ts && node script/delete_folder.mjs -/lib/tmp",
+    "lib:index": "node script/build_lib.mjs -type -index.d.ts",
+    "init:delete": "node script/delete_folder.mjs -/lib/index.d.ts && node script/delete_folder.mjs -/lib/type",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",
-    "@blackwhite88/gamecreatorlib": "^0.990.622",
-    "@gamecreator/gamecreatorlib": "^0.990.62",
     "dotenv": "^16.3.1",
     "eslint": "^8.49.0",
     "typescript": "^5.2.2"

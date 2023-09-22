@@ -5,19 +5,18 @@
       "DOM",
       "ES2015"
     ],
-    "rootDir": "./src",
+    "rootDir": "./",
     "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "outFile": "../dist/build/main.js",
+    "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true
   },
   "skipLibCheck": true,
-  "files": [
-    "lib/index.d.ts"
-  ],
   "include": [
-    "src/**/*.ts"
+    "**/*.ts"
   ],
   "exclude": [
     "node_modules"

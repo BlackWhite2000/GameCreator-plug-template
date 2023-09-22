@@ -6,12 +6,20 @@ import dotenv from 'dotenv'
 // 从 .env 文件中加载环境变量
 dotenv.config()
 
-// 获取环境变量中的输出名称
+// 获取环境变量
 const outputName = process.env.OUTPUT_NAME
-
-if (!outputName) {
-  console.error('未找到输出名称，请在 .env 文件中设置 OUTPUT_NAME 变量。')
-  process.exit(1)
+const env = [
+  {
+    var: outputName,
+    name: 'OUTPUT_NAME',
+    type: 'ts合并名称',
+  },
+]
+for (const i in env) {
+  if (!env[i].var) {
+    console.error(`未找到${env[i].type}，请在 .env 文件中设置 ${env[i].name} 变量。`)
+    process.exit(1)
+  }
 }
 
 // 定义要合并的文件的目录
@@ -46,7 +54,7 @@ if (!fs.existsSync('./dist'))
 
 // 检查命令行参数是否包含 -w
 if (process.argv.includes('-w')) {
-  console.log('持续执行中...')
+  console.log('pnpm run build:w 持续监听中...')
   // 监视源文件目录，以便在文件更改时重新合并
   fs.watch(srcDir, (event, filename) => {
     if (path.extname(filename) === '.ts') {
