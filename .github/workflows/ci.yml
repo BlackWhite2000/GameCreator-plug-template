@@ -28,7 +28,7 @@ jobs:
 
   automerge:
     needs: ci
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot'
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
