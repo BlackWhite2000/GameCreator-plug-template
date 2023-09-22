@@ -5,11 +5,11 @@
       "DOM",
       "ES2015"
     ],
-    "forceConsistentCasingInFileNames": true,
     "rootDir": "./src",
+    "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "strict": true,
     "declarationMap": true,
+    "strict": true,
     "sourceMap": true
   },
   "skipLibCheck": true,
