@@ -4,7 +4,7 @@ GameCreator功能开发起手模板
 
 ## 开始
 
-```npm
+```shell
 npm install pnpm -g
 pnpm install
 ```
@@ -19,7 +19,7 @@ pnpm install
 
 ## 命令说明
 
-```npm
-pnpm build // 将src目录内的ts合并成一个ts文件，并放置dist目录内
-pnpm link // 将硬链接dist目录内的ts至工程位置内，好处是修改后工程硬链接的ts文件也会同步修改
+```shell
+pnpm build # 将src目录内的ts合并成一个ts文件，并放置dist目录内
+pnpm link # 将硬链接dist目录内的ts至工程位置内，好处是修改后工程硬链接的ts文件也会同步修改
 ```
