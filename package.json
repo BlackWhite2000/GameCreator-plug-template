@@ -3,6 +3,7 @@
   "packageManager": "pnpm@8.7.0",
   "scripts": {
     "build": "node build.mjs",
+    "build:w": "node build.mjs -w",
     "link": "node link.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"

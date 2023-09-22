@@ -44,12 +44,27 @@ function mergeFilesInDirectory(directoryPath, outputFilePath) {
 if (!fs.existsSync('./dist'))
   fs.mkdirSync('./dist')
 
-// 合并所有.ts文件
-try {
-  fs.writeFileSync(outputFilePath, '') // 创建一个空文件
-  mergeFilesInDirectory(srcDir, outputFilePath)
-  console.log(`合并成功，合并后的文件位于: ${outputFilePath}`)
+// 检查命令行参数是否包含 -w
+if (process.argv.includes('-w')) {
+  console.log('持续执行中...')
+  // 监视源文件目录，以便在文件更改时重新合并
+  fs.watch(srcDir, (event, filename) => {
+    if (path.extname(filename) === '.ts') {
+      // console.log(`检测到文件更改: ${filename}`)
+      fs.writeFileSync(outputFilePath, '') // 清空合并文件
+      mergeFilesInDirectory(srcDir, outputFilePath) // 重新合并文件
+      // console.log(`合并成功，合并后的文件位于: ${outputFilePath}`)
+    }
+  })
 }
-catch (error) {
-  console.error(`合并失败: ${error}`)
+else {
+  // 合并所有.ts文件
+  try {
+    fs.writeFileSync(outputFilePath, '') // 创建一个空文件
+    mergeFilesInDirectory(srcDir, outputFilePath)
+    console.log(`合并成功，合并后的文件位于: ${outputFilePath}`)
+  }
+  catch (error) {
+    console.error(`合并失败: ${error}`)
+  }
 }
