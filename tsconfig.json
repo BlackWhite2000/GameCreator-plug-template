@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": true,
     "target": "ES5",
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "rootDir": "./src",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "lib": [
       "DOM",
       "ES2015"
-    ]
+    ],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
   },
   "skipLibCheck": true,
   "files": [
