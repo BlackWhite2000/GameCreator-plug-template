@@ -5,8 +5,7 @@
     "build": "node build.mjs",
     "link": "node link.mjs",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "typecheck": "npx tsc --noEmit"
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",

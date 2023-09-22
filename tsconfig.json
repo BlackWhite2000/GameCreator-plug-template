@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "target": "ES5",
+    "strict": true,
     "rootDir": "./src",
     "declaration": true,
     "declarationMap": true,
@@ -13,11 +13,11 @@
     ]
   },
   "skipLibCheck": true,
-  "include": [
-    "src/**/*.ts"
-  ],
   "files": [
     "api.d.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules"

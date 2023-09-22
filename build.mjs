@@ -40,6 +40,10 @@ function mergeFilesInDirectory(directoryPath, outputFilePath) {
   }
 }
 
+// 检查是否存在 dist 目录，如果不存在则创建它
+if (!fs.existsSync('./dist'))
+  fs.mkdirSync('./dist')
+
 // 合并所有.ts文件
 try {
   fs.writeFileSync(outputFilePath, '') // 创建一个空文件
