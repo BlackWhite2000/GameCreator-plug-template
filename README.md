@@ -31,6 +31,7 @@ pnpm run init
 pnpm run init # 将自动获取工程的 .d.ts，自动建立硬链接，以确保开发环境是正确的，最后会执行一次 pnpm run build:w。该命令通常执行一次即可。如果希望更新开发环境可再次执行。
 pnpm run build # 合并 src 目录内的ts文件至 dist 目录内
 pnpm run build:w # 持续监听执行 pnpm run build，当 src 目录内有变更时，自动合并更新。
+pnpm run build:lib # 获取工程的 .d.ts，工程如果新增了相关api，可以执行一次来更新。
 pnpm run build:public # 将 public 目录内的文件拷贝至 dist/public。同时将会拷贝至游戏工程内，通常路径是：我的游戏工程/Game/game/硬链接后存放的文件夹名/public。
 pnpm run build:ts # 将 build 目录内的文件拷贝至 dist/build。同时将会拷贝至游戏工程内，通常路径是：我的游戏工程/Game/game/硬链接后存放的文件夹名/build。
 pnpm run build:update # 将会执行 pnpm run build:public 跟 pnpm run build:ts。
