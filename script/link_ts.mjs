@@ -42,7 +42,7 @@ const rl = readline.createInterface({
 
 const currentWorkingDirectory = process.cwd() // 获取当前工作目录
 const sourcePath = `${currentWorkingDirectory}/dist/${outputName}.ts` // 源文件路径
-const hardLinkPath = `${templatePath}/Game/game/${outputFolderName}/${outputName}.ts` // 创建的硬链接路径
+const hardLinkPath = `${templatePath}/Game/${outputFolderName}/${outputName}.ts` // 创建的硬链接路径
 
 // 确保目标路径存在，如果不存在就创建它
 async function ensureDirectoryExists(directoryPath) {

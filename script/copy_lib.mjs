@@ -9,6 +9,7 @@ dotenv.config()
 // 获取环境变量
 const templatePath = process.env.TEMPLATE_PATH
 const outputName = process.env.OUTPUT_NAME
+const outputFolderName = process.env.OUTPUT_FOLDER_NAME
 const env = [
   {
     var: templatePath,
@@ -19,6 +20,11 @@ const env = [
     var: outputName,
     name: 'OUTPUT_NAME',
     type: 'ts合并名称',
+  },
+  {
+    var: outputFolderName,
+    name: 'OUTPUT_FOLDER_NAME',
+    type: '硬链接后存放的文件夹名',
   },
 ]
 for (const i in env) {
@@ -36,7 +42,7 @@ if (args.length !== 2) {
 }
 
 const currentWorkingDirectory = process.cwd() // 获取当前工作目录
-const notCopyPath = [`${templatePath}/Game/game/${outputName}`]
+const notCopyPath = [`${templatePath}\\Game\\${outputFolderName}`]
 const sourceDirectory = `${templatePath}/${args[0]}` // 设置源目录
 const destinationDirectory = `${currentWorkingDirectory}/lib/${args[1]}` // 设置目标目录
 

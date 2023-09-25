@@ -42,7 +42,7 @@ if (args.length !== 1) {
 }
 const currentWorkingDirectory = process.cwd() // 获取当前工作目录
 const sourceDirectory = `${currentWorkingDirectory}/dist/${args[0]}`// 设置源目录
-const destinationDirectory = `${templatePath}/Game/game/${outputFolderName}/${args[0]}` // 设置目标目录
+const destinationDirectory = `${templatePath}/Game/${outputFolderName}/${args[0]}` // 设置目标目录
 
 async function copyDirectory(source, target) {
   try {
