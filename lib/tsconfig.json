@@ -11,8 +11,8 @@
     "sourceMap": true,
     "declarationDir": "./dist",
     "forceConsistentCasingInFileNames": true,
-    "strict": false
-  },
+    "strict": false,
+},
   "skipLibCheck": true,
   "files": [
     "type/gc.d.ts"
