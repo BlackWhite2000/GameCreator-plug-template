@@ -9,7 +9,7 @@
     "declaration": true,
     "declarationMap": false,
     "sourceMap": false,
-    "outFile": "../dist/build/main.js",
+    "outFile": "../dist/main.js",
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true
@@ -17,6 +17,11 @@
   "skipLibCheck": true,
   "include": [
     "**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../template/game"
+    }
   ],
   "exclude": [
     "node_modules"

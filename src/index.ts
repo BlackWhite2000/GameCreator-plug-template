@@ -1,2 +1,2 @@
-const hello = 'hello world'
+const hello = 'hello world2'
 trace(hello)

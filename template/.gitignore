@@ -9,7 +9,8 @@ Game/dist
 /editorAsset
 /GameCreator
 /GameCreatorLib
-Game/tsconfig.tsbuildinfo
+Game/tsconfig.ts
+/buildinfo
 /app.d.ts.map
 /app.js
 /app.js.map
@@ -25,3 +26,4 @@ yarn.lock
 /publish
 /scripts
 /icon.png
+/gitignore

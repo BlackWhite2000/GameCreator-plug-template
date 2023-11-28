@@ -8,24 +8,24 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 // 获取环境变量
-const templatePath = process.env.TEMPLATE_PATH
-const outputName = process.env.OUTPUT_NAME
+const outputPath = process.env.OUTPUT_PATH
 const outputFolderName = process.env.OUTPUT_FOLDER_NAME
+const outputName = process.env.OUTPUT_NAME
 const env = [
   {
-    var: templatePath,
-    name: 'TEMPLATE_PATH',
-    type: '工程根路径',
-  },
-  {
-    var: outputName,
-    name: 'OUTPUT_NAME',
-    type: 'ts合并名称',
+    var: outputPath,
+    name: 'OUTPUT_PATH',
+    type: 'ts合并路径',
   },
   {
     var: outputFolderName,
     name: 'OUTPUT_FOLDER_NAME',
-    type: '硬链接后存放的文件夹名',
+    type: 'ts目录名称',
+  },
+  {
+    var: outputName,
+    name: 'OUTPUT_NAME',
+    type: 'ts文件名称',
   },
 ]
 for (const i in env) {
@@ -34,15 +34,10 @@ for (const i in env) {
     process.exit(1)
   }
 }
-// 获取命令行参数
-const args = process.argv.slice(2).map(arg => arg.replace(/^-/, ''))
-if (args.length !== 1) {
-  console.error('请提供参数作为指定的文件路径。')
-  process.exit(1)
-}
+
 const currentWorkingDirectory = process.cwd() // 获取当前工作目录
-const sourceDirectory = `${currentWorkingDirectory}/dist/${args[0]}`// 设置源目录
-const destinationDirectory = `${templatePath}/Game/${outputFolderName}/${args[0]}` // 设置目标目录
+const sourceDirectory = `${currentWorkingDirectory}/dist`// 设置源目录
+const destinationDirectory = path.join(currentWorkingDirectory, 'template', outputPath, outputFolderName, 'dist') // 设置目标目录
 
 async function copyDirectory(source, target) {
   try {

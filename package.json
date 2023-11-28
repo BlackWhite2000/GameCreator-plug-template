@@ -3,19 +3,11 @@
   "packageManager": "pnpm@8.7.0",
   "scripts": {
     "build": "node scripts/build_ts.mjs",
-    "build:lib": "pnpm run lib:gc && pnpm run lib:game && pnpm run lib:index",
     "build:w": "node scripts/build_ts.mjs -w",
-    "build:update": "pnpm run build:public && pnpm run build:ts",
-    "build:public": "node scripts/delete_nottype.mjs -dist/public && node public/config.mjs && node scripts/copy_dist.mjs -public",
-    "build:ts": "node scripts/delete_nottype.mjs -dist/public && tsc -p ./build/tsconfig.json && node scripts/copy_dist.mjs -build",
-    "link": "node scripts/link_ts.mjs",
-    "lib:gc": "node scripts/copy_lib.mjs -GameCreatorLib -dist/gc && node scripts/build_lib.mjs -/dist/gc -/type/gc.d.ts && node scripts/delete_nottype.mjs -lib/dist/gc",
-    "lib:game": "node scripts/copy_lib.mjs -Game -tmp/game && tsc -p ./lib/tsconfig.json && node scripts/build_lib.mjs -/dist/game -/type/game.d.ts && node scripts/delete_folder.mjs -/lib/tmp",
-    "lib:index": "node scripts/build_lib.mjs -type -index.d.ts",
-    "init:delete": "node scripts/delete_folder.mjs -/lib/index.d.ts && node scripts/delete_folder.mjs -/lib/type",
+    "build:public": "node public/config.mjs",
+    "build:ts": "tsc -p ./build/tsconfig.json && node scripts/copy_dist.mjs",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "init": "pnpm run init:delete && pnpm run build:lib && pnpm run build && pnpm run link && node scripts/hello.mjs && pnpm run build:w"
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",

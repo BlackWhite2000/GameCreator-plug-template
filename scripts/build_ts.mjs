@@ -7,12 +7,24 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 // 获取环境变量
+const outputPath = process.env.OUTPUT_PATH
+const outputFolderName = process.env.OUTPUT_FOLDER_NAME
 const outputName = process.env.OUTPUT_NAME
 const env = [
   {
+    var: outputPath,
+    name: 'OUTPUT_PATH',
+    type: 'ts合并路径',
+  },
+  {
+    var: outputFolderName,
+    name: 'OUTPUT_FOLDER_NAME',
+    type: 'ts目录名称',
+  },
+  {
     var: outputName,
     name: 'OUTPUT_NAME',
-    type: 'ts合并名称',
+    type: 'ts文件名称',
   },
 ]
 for (const i in env) {
@@ -26,7 +38,7 @@ for (const i in env) {
 const srcDir = './src'
 
 // 定义要输出的合并后的文件路径和文件名
-const outputFilePath = `./dist/${outputName}.ts`
+const outputFilePath = path.join('template', outputPath, outputFolderName, `${outputName}.ts`)
 
 // 递归遍历目录并合并所有.ts文件
 function mergeFilesInDirectory(directoryPath, outputFilePath) {
@@ -49,8 +61,8 @@ function mergeFilesInDirectory(directoryPath, outputFilePath) {
 }
 
 // 检查是否存在 dist 目录，如果不存在则创建它
-if (!fs.existsSync('./dist'))
-  fs.mkdirSync('./dist')
+if (!fs.existsSync(path.join('template', outputPath, outputFolderName)))
+  fs.mkdirSync(path.join('template', outputPath, outputFolderName))
 
 // 检查命令行参数是否包含 -w
 if (process.argv.includes('-w')) {
