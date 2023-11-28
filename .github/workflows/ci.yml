@@ -25,16 +25,3 @@ jobs:
 
       - name: 执行Lint
         run: pnpm run lint
-
-  automerge:
-    needs: ci
-    if: github.actor == 'dependabot[bot]'
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      contents: write
-    steps:
-      - uses: fastify/github-action-merge-dependabot@main
-        with:
-          github-token: ${{ github.token }}
-          target: minor
