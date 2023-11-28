@@ -1,57 +1,47 @@
-# Docus Starter
+## 开始
 
-Starter template for [Docus](https://docus.dev).
-
-## Clone
-
-Clone the repository (using `nuxi`):
+### 1、安装依赖
 
 ```bash
-npx nuxi init -t themes/docus
+pnpm install
 ```
 
-## Setup
-
-Install dependencies:
+### 2、实时编写
 
 ```bash
-yarn install
+pnpm run dev
 ```
 
-## Development
+执行 `pnpm run dev` 后，访问 `http://localhost:4567` 即可开始实时编写文档。
+
+## 配置
+
+### API
+
+默认提供了API的请求方法，可通过 `docs/constants/apis` 调整。
+
+其中 `docs/apis` 已经预设了一套请求代码，并关联到 `docs/components/content/Versions.vue`。
+
+### SEO
+
+`docs/constants/index` 设定了网站基本的SEO，可自由修改扩展。
+
+### LOGO
+
+可通过 `docs/components/Logo.vue` 去修改LOGO的样式，默认使用SVG。
+
+## 部署
+
+### 1、编译
 
 ```bash
-yarn dev
+pnpm generate
 ```
 
-## Edge Side Rendering
+### 2、发布
 
-Can be deployed to Vercel Functions, Netlify Functions, AWS, and most Node-compatible environments.
+编译后的文件通常存放在 `docs\dist` 内。
 
-Look at all the available presets [here](https://v3.nuxtjs.org/guide/deploy/presets).
+将这些文件发布至服务端即可。
 
-```bash
-yarn build
-```
-
-## Static Generation
-
-Use the `generate` command to build your application.
-
-The HTML files will be generated in the .output/public directory and ready to be deployed to any static compatible hosting.
-
-```bash
-yarn generate
-```
-
-## Preview build
-
-You might want to preview the result of your build locally, to do so, run the following command:
-
-```bash
-yarn preview
-```
-
----
-
-For a detailed explanation of how things work, check out [Docus](https://docus.dev).
+更多关于该文档的工作原理，请查看 [Docus](https://docus.dev).
