@@ -42,6 +42,7 @@ pnpm run build # 合并 src 目录内的ts文件并拷贝至工程内。
 pnpm run build:w # 持续监听执行 pnpm run build，当 src 目录内有变更时，自动合并更新。
 pnpm run build:public # 将 public 目录内的文件并拷贝至工程内。
 pnpm run build:ts # 将 build 目录内的文件编译成js，并拷贝至工程内。
+pnpm run build:allTs # 将 src 目录内的文件并拷贝至工程内，与 pnpm run build 区别在于不会合并ts。
 ```
 
 ## 目录说明

@@ -18,7 +18,7 @@
   ],
   "references": [
     {
-      "path": "./template/game"
+      "path": "./template/Game"
     }
   ],
   "exclude": [
