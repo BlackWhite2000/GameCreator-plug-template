@@ -25,7 +25,7 @@ pnpm install
 
 将工程下载放到 `template` 目录内。
 
-如果发现 `tsconfig.json` 不再报找不到文件 `**/template/game` 的错误，表示放置正确。
+如果发现 `tsconfig.json` 不再报找不到文件 `**/template/Game` 的错误，表示放置正确。
 
 ### 3、开发
 
