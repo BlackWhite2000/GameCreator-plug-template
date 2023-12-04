@@ -43,6 +43,8 @@ pnpm run build:w # 持续监听执行 pnpm run build，当 src 目录内有变�
 pnpm run build:public # 将 public 目录内的文件并拷贝至工程内。
 pnpm run build:ts # 将 build 目录内的文件编译成js，并拷贝至工程内。
 pnpm run build:allTs # 将 src 目录内的文件并拷贝至工程内，与 pnpm run build 区别在于不会合并ts。
+pnpm run delete:ts # 删除 pnpm run build、pnpm run build:allTs 生成的ts文件。
+pnpm run delete:all # 删除所有生成的文件，包括目录。
 ```
 
 ## 目录说明

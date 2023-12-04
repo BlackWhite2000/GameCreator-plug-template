@@ -7,6 +7,8 @@
     "build:public": "node public/config.mjs",
     "build:ts": "tsc -p ./build/tsconfig.json && node scripts/copy_dist.mjs",
     "build:allTs": "node scripts/copy_ts.mjs",
+    "delete:ts": "node scripts/delete_ts.mjs",
+    "delete:all": "node scripts/delete_all.mjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
