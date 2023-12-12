@@ -1,5 +1,5 @@
 const serverApiUrl = 'https://my.api.com'
-const serverApiParam = '/api/gamecreator/modules?id='
+const serverApiParam = '/apis/gamecreator/modules?id='
 
 export {
   serverApiUrl,

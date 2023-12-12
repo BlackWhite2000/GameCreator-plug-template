@@ -29,14 +29,6 @@ try {
     </div>
     <div class="mb-15px">
       <p class="text-xl font-bold">
-        {{ appType }}最新更新日期
-      </p>
-      <p>
-        {{ data?.updated_at ? `${data.updated_at}` : '获取失败' }}
-      </p>
-    </div>
-    <div class="mb-15px">
-      <p class="text-xl font-bold">
         {{ appType }}下载地址
       </p>
       <p>
