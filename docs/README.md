@@ -30,12 +30,12 @@ pnpm run dev
 
 可通过 `docs/components/Logo.vue` 去修改LOGO的样式，默认使用SVG。
 
-## 部署
+## 静态部署
 
 ### 1、编译
 
 ```bash
-pnpm generate
+pnpm run generate
 ```
 
 ### 2、发布
@@ -44,4 +44,21 @@ pnpm generate
 
 将这些文件发布至服务端即可。
 
-更多关于该文档的工作原理，请查看 [Docus](https://docus.dev).
+
+## 动态部署
+
+### 1、编译
+
+```bash
+pnpm run build
+```
+
+### 2、发布
+
+编译后的文件通常存放在 `docs\.output` 内。
+
+需要nodejs服务器来启动 `docs\.output\server\index.mjs` ，推荐使用PM2。
+
+## 更多
+
+更多关于该文档的工作原理，请查看 [Docus](https://docus.dev)。
