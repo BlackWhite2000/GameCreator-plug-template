@@ -9,7 +9,7 @@ const data = ref<DataType['data']>()
 
 try {
   const response = await get(`${apiUrl}${serverApiParam}${appTypeId}`)
-  data.value = response.data.data
+  data.value = response.data
   if (data.value) useData().response = data.value
 } catch (error) {
   console.error(error)
