@@ -9,7 +9,7 @@ async function get(url: string, headers?: object) {
       // withCredentials: true, // 启用跨域请求携带凭证
       headers,
     })
-    return { code: 200, message: '请求成功', data: response.data }
+    return response.data
   }
   catch (error: any) {
     console.error(error.message)
@@ -24,7 +24,7 @@ async function post(url: string, json: object, headers?: object) {
       headers,
     })
 
-    return { code: 200, message: '请求成功', data: response.data }
+    return response.data
   }
   catch (error: any) {
     console.error(error.message)

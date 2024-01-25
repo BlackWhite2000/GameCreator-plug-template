@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { get, apiUrl } from "../../apis/axios";
 import type { DataType } from '../../apis/type'
-import  { appType, appTypeId } from '../../constants/index'
+import { appType, appTypeId } from '../../constants/index'
 import { serverApiParam } from '../../constants/apis'
 import { useData } from '../../composables/usedata'
 
