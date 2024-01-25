@@ -38,6 +38,7 @@ for (const i in env) {
 const srcDir = './src'
 
 // 定义要输出的合并后的文件路径和文件名
+const currentWorkingDirectory = process.cwd() // 获取当前工作目录
 const outputFilePath = path.join('template', outputPath, outputFolderName, `${outputName}.ts`)
 
 // 递归遍历目录并合并所有.ts文件
@@ -82,7 +83,7 @@ else {
   try {
     fs.writeFileSync(outputFilePath, '') // 创建一个空文件
     mergeFilesInDirectory(srcDir, outputFilePath)
-    console.log(`合并成功，合并后的文件位于: ${outputFilePath}`)
+    console.log(`合并成功，合并后的文件位于: ${path.join(currentWorkingDirectory, outputFilePath)}`)
   }
   catch (error) {
     console.error(`合并失败: ${error}`)
