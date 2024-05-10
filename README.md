@@ -40,6 +40,7 @@ pnpm install
 ```shell
 pnpm run build # 合并 src 目录内的ts文件并拷贝至工程内。
 pnpm run build:w # 持续监听执行 pnpm run build，当 src 目录内有变更时，自动合并更新。
+pnpm run build:all:w # 持续监听，当 src 目录内有变更时，将变更文件拷贝至工程内。
 pnpm run build:public # 将 public 目录内的文件并拷贝至工程内。
 pnpm run copy # 将 src 目录内的文件并拷贝至工程内，与 pnpm run build 区别在于不会合并ts。
 pnpm run delete:ts # 删除 pnpm run build、pnpm run copy 生成的ts文件。

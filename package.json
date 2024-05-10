@@ -4,6 +4,7 @@
   "scripts": {
     "build": "node scripts/build_ts.mjs",
     "build:w": "node scripts/build_ts.mjs -w",
+    "build:all:w": "node scripts/build_allts.mjs -w",
     "build:public": "node public/config.mjs",
     "copy": "node scripts/copy_ts.mjs",
     "delete:ts": "node scripts/delete_ts.mjs",
