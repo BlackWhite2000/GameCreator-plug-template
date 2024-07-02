@@ -9,13 +9,9 @@
     "copy": "node scripts/copy_ts.mjs",
     "delete:ts": "node scripts/delete_ts.mjs",
     "delete:all": "node scripts/delete_all.mjs",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.43.1",
     "dotenv": "^16.3.1",
-    "eslint": "^8.54.0",
     "typescript": "5.2.2"
   }
 }

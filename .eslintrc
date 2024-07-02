@@ -1,9 +1,0 @@
-{
-  "extends": "@antfu",
-   "rules": {
-    "no-console": "off",
-    "@typescript-eslint/no-namespace": "off",
-    "unicorn/prefer-includes": "off",
-    "@typescript-eslint/prefer-ts-expect-error": "off"
-  }
-}
