@@ -31,10 +31,6 @@ pnpm install
 
 从 `src` 文件开始，开发完毕后执行 `pnpm run build` 将自动合并ts并拷贝至工程内。
 
-### 4、填写开发文档
-
-`docs` 内置了md文档，可查看 `docs/README.md` 来开始。
-
 ## 命令说明
 
 ```shell
@@ -50,7 +46,6 @@ pnpm run delete:all # 删除所有生成的文件，包括目录。
 ## 目录说明
 
 ```shell
-docs # 项目配套文档。
 template # 项目工程存放目录。
 script # 该项目运行脚本。
 public # 该目录下的文件不会被合并，将会直接被拷贝至工程。
