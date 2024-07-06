@@ -8,7 +8,7 @@
     "build:public": "node public/config.mjs",
     "copy": "node scripts/copy_ts.mjs",
     "delete:ts": "node scripts/delete_ts.mjs",
-    "delete:all": "node scripts/delete_all.mjs",
+    "delete:all": "node scripts/delete_all.mjs"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
